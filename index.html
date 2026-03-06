@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PETER MUSAU MUTUA | Educator • Minister • Musician</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #3498db;
+            --secondary: #2c3e50;
+            --yt-red: #ff0000;
+            --wa-green: #25D366;
+            --paypal-blue: #003087;
+            --mpesa-green: #40ae49;
+            --light: #f4f7f6;
+            --white: #ffffff;
+        }
+
+        * { box-sizing: border-box; scroll-behavior: smooth; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; line-height: 1.6; color: #333; margin: 0; background-color: var(--light); }
+        
+        .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+
+        /* Navigation */
+        .navbar { position: sticky; top: 0; background: var(--white); display: flex; justify-content: center; gap: 20px; padding: 15px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); z-index: 1000; flex-wrap: wrap; }
+        .navbar a { text-decoration: none; color: var(--secondary); font-weight: bold; font-size: 0.8rem; text-transform: uppercase; }
+        .navbar a:hover { color: var(--primary); }
+
+        /* Header Section */
+        header { text-align: center; padding: 60px 20px; background: linear-gradient(135deg, var(--secondary), #4b6584); color: white; border-radius: 0 0 50px 50px; }
+        .profile-img { width: 220px; height: 220px; object-fit: cover; border-radius: 50%; margin: 25px auto; display: block; border: 5px solid rgba(255,255,255,0.2); }
+
+        /* Combined Mission Statement */
+        .mission-card { background: var(--white); padding: 35px; border-radius: 15px; margin: -40px auto 40px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); border-top: 8px solid var(--primary); text-align: center; }
+
+        /* Section Titles */
+        .section-title { text-align: center; margin: 50px 0 30px; font-size: 1.8rem; color: var(--secondary); text-transform: uppercase; letter-spacing: 1px; }
+        .main-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+
+        /* Cards Style */
+        .card { background: var(--white); border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: 0.3s; height: 100%; display: flex; flex-direction: column; }
+        .card:hover { transform: translateY(-5px); }
+        .card-img { width: 100%; height: 200px; object-fit: cover; }
+        .card-content { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; }
+        
+        /* Video wrapper */
+        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; border-radius: 10px; overflow: hidden; margin-bottom: 15px; background: #000; }
+        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+
+        /* Payment & Action Buttons */
+        .btn { padding: 12px 20px; border-radius: 8px; font-weight: bold; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 8px; transition: 0.3s; width: 100%; margin-top: 10px; border: none; cursor: pointer; }
+        .btn-wa { background: var(--wa-green); color: white; }
+        .btn-pp { background: var(--paypal-blue); color: white; }
+        .btn-yt { background: var(--yt-red); color: white; width: auto; margin: 0 auto; }
+        .btn-secondary { background: var(--secondary); color: white; }
+
+        /* Payment Info Box */
+        .payment-box { background: #f0fdf4; padding: 20px; border-radius: 12px; border: 1px solid #dcfce7; margin-top: 20px; text-align: center; }
+        .payment-method { display: block; font-size: 1.1rem; color: var(--secondary); margin-bottom: 5px; }
+
+        /* Testimonials Section */
+        .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .testimonial-card { background: #fff; padding: 25px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border-left: 5px solid var(--primary); font-style: italic; }
+        .testi-author { display: block; margin-top: 15px; font-weight: bold; font-style: normal; color: var(--primary); }
+        
+        /* Footer */
+        footer { background: var(--secondary); color: white; text-align: center; padding: 60px 20px; margin-top: 60px; }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 1.6rem; }
+            .navbar { gap: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#education">Education</a>
+        <a href="#ministry">Ministry</a>
+        <a href="#testimonials">Feedback</a>
+        <a href="#contact">Payments & Contact</a>
+    </nav>
+
+    <header id="home">
+        <div class="container">
+            <h1>PETER MUSAU MUTUA</h1>
+            <p style="color:var(--primary); font-weight:bold; letter-spacing:2px; margin-top:10px;">EDUCATOR • MINISTER • MUSICIAN</p>
+            <img src="1000008418.jpg" class="profile-img" alt="Peter Musau Mutua">
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="mission-card">
+            <p>I am a dedicated <strong>Science and Mathematics educator</strong> and <strong>Minister of the Gospel</strong>, committed to turning abstract formulas into tangible real-world solutions. My teaching philosophy centers on <strong>"learning by doing"</strong>—whether through physics experiments, complex algebraic challenges, or spiritual worship, I help others find the logic and purpose in the world around them.</p>
+            <p>I focus on building confidence through <strong>data-driven instruction</strong> and interactive inquiry to ensure every student and believer masters the variables of their education and spiritual growth.</p>
+        </div>
+
+        <h2 class="section-title" id="education"><i class="fas fa-graduation-cap"></i> Bookstore & Education Hub</h2>
+        <div class="main-grid">
+            <div class="card">
+                <img src="1000008446.jpg" class="card-img" alt="Mathematics Book">
+                <div class="card-content">
+                    <h3>Math Revision Master</h3>
+                    <p>Comprehensive KCSE/IGCSE revision papers with step-by-step marking schemes and logical guides.</p>
+                    <p style="font-weight:bold; color:var(--secondary); font-size: 1.2rem;">Ksh 500</p>
+                    <a href="https://wa.me/254746357349?text=Hello%20Peter,%20I%20want%20to%20buy%20the%20Math%20Revision%20Master." class="btn btn-wa">
+                        <i class="fab fa-whatsapp"></i> Buy via WhatsApp
+                    </a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <img src="1000008447.jpg" class="card-img" alt="Physics Book">
+                <div class="card-content">
+                    <h3>Physics Essentials Guide</h3>
+                    <p>A master summary of all key formulas and required experiments for high school laboratory success.</p>
+                    <p style="font-weight:bold; color:var(--secondary); font-size: 1.2rem;">Ksh 450</p>
+                    <a href="https://wa.me/254746357349?text=Hello%20Peter,%20I%20want%20to%20buy%20the%20Physics%20Essentials%20Guide." class="btn btn-wa">
+                        <i class="fab fa-whatsapp"></i> Buy via WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title" id="ministry"><i class="fas fa-cross"></i> Ministry & Music</h2>
+        <div class="card" style="max-width: 800px; margin: 0 auto;">
+            <div class="card-content" style="text-align: center;">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/NADzpsT6tHI?rel=0" allowfullscreen></iframe>
+                </div>
+                <h3>KUNA MATUMAINI (Official Video)</h3>
+                <p>Spiritual nourishment and uplifting gospel music. Subscribe to my channel for more sermons and worship songs.</p>
+                <a href="https://youtube.com/@petermutua3996?si=uFjIBvZnSjZSs-De" class="btn btn-yt" target="_blank">
+                    <i class="fab fa-youtube"></i> Visit My YouTube Channel
+                </a>
+            </div>
+        </div>
+
+        <h2 class="section-title" id="testimonials"><i class="fas fa-star"></i> Student & Parent Feedback</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <p>"The 'learning by doing' approach made Physics so easy to understand. My grades improved in just one term!"</p>
+                <span class="testi-author">— KCSE Candidate, 2024</span>
+            </div>
+            <div class="testimonial-card">
+                <p>"His music ministry is a blessing. 'Kuna Matumaini' has been a song of hope for my entire family."</p>
+                <span class="testi-author">— Ministry Partner</span>
+            </div>
+            <div class="testimonial-card">
+                <p>"Very professional tutoring services and highly effective revision materials. Highly recommended for any serious student."</p>
+                <span class="testi-author">— Parent, Mombasa</span>
+            </div>
+        </div>
+
+        <h2 class="section-title" id="contact">Payments & Inquiries</h2>
+        <div class="card" style="max-width: 700px; margin: 0 auto; padding: 30px;">
+            <div class="payment-box">
+                <span class="payment-method"><strong><i class="fas fa-mobile-alt"></i> M-Pesa:</strong> 0746357349</span>
+                <span class="payment-method"><strong><i class="fab fa-paypal"></i> PayPal:</strong> pm6482545@gmail.com</span>
+                <p style="font-size: 0.85rem; color: #666; margin-top: 10px;">Please send a screenshot of your payment via WhatsApp for order confirmation.</p>
+            </div>
+
+            <p style="text-align: center; margin-top: 30px;">For tutoring bookings or ministry invitations, reach out below:</p>
+            
+            <div style="display: flex; gap: 10px; margin-bottom: 25px;">
+                <a href="https://wa.me/254746357349" class="btn btn-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                <a href="mailto:pm6482545@gmail.com" class="btn btn-pp"><i class="fas fa-envelope"></i> Email Me</a>
+            </div>
+
+            <form action="https://formspree.io/f/xoqogpgz" method="POST">
+                <input type="text" name="name" placeholder="Your Name" style="width:100%; padding:12px; margin-bottom:12px; border-radius:8px; border:1px solid #ddd;" required>
+                <input type="email" name="email" placeholder="Your Email Address" style="width:100%; padding:12px; margin-bottom:12px; border-radius:8px; border:1px solid #ddd;" required>
+                <textarea name="message" rows="4" placeholder="How can I help you today?" style="width:100%; padding:12px; border-radius:8px; border:1px solid #ddd;" required></textarea>
+                <button type="submit" class="btn btn-secondary" style="width:100%; margin-top:10px;">Send Secure Message</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>"Education is a constant, the student is the variable—together we create infinite possibilities."</p>
+        <p>Email: <strong>pm6482545@gmail.com</strong> | Location: <strong>Mombasa, Kenya</strong></p>
+        <p style="font-size: 0.8rem; opacity: 0.5; margin-top: 25px;">© 2026 Peter Musau Mutua. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
