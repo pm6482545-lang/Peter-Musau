@@ -356,101 +356,115 @@ footer i {
             </div>
         </div>
 
-        <h2 class="section-title" id="contact">Payments & Inquiries</h2>
-        <div class="card" style="max-width: 700px; margin: 0 auto; padding: 30px;">
-            <div class="payment-box">
-                <span class="payment-method"><strong><i class="fas fa-mobile-alt"></i> M-Pesa:</strong> 0746357349</span>
-                <span class="payment-method"><strong><i class="fab fa-paypal"></i> PayPal:</strong> pm6482545@gmail.com</span>
-                <p style="font-size: 0.85rem; color: #666; margin-top: 10px;">Please send a screenshot of your payment via WhatsApp for order confirmation.</p>
-            </div>
+        <style>
+    .resource-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        max-width: 1100px;
+        margin: 40px auto;
+        padding: 20px;
+    }
+    .res-card {
+        background: white;
+        padding: 30px;
+        border-radius: 20px;
+        text-align: center;
+        border: 1px solid #e2e8f0;
+        transition: 0.3s;
+    }
+    .res-card:hover { transform: translateY(-10px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); }
+    .btn-main {
+        display: block;
+        padding: 15px;
+        margin-top: 20px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+    /* Scroll to Top Button Style */
+    #scrollTopBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        border: none;
+        outline: none;
+        background-color: #2563eb;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 50%;
+        font-size: 18px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    @media (max-width: 768px) { .resource-grid { grid-template-columns: 1fr; } }
+</style>
 
-            <p style="text-align: center; margin-top: 30px;">For tutoring bookings or ministry invitations, reach out below:</p>
-            
-            <div style="display: flex; gap: 10px; margin-bottom: 25px;">
-                <a href="https://wa.me/254746357349" class="btn btn-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                <a href="mailto:pm6482545@gmail.com" class="btn btn-pp"><i class="fas fa-envelope"></i> Email Me</a>
-            </div>
+<section id="resources" style="background: #f1f5f9; padding: 60px 0;">
+    <div style="text-align: center; margin-bottom: 30px;">
+        <h2 style="color: #0f172a; font-size: 2rem;">Resource Center</h2>
+        <p style="color: #64748b;">Download my materials or order premium masterclasses.</p>
+    </div>
 
-            <form action="https://formspree.io/f/xoqogpgz" method="POST">
-                <input type="text" name="name" placeholder="Your Name" style="width:100%; padding:12px; margin-bottom:12px; border-radius:8px; border:1px solid #ddd;" required>
-                <input type="email" name="email" placeholder="Your Email Address" style="width:100%; padding:12px; margin-bottom:12px; border-radius:8px; border:1px solid #ddd;" required>
-                <textarea name="message" rows="4" placeholder="How can I help you today?" style="width:100%; padding:12px; border-radius:8px; border:1px solid #ddd;" required></textarea>
-                <button type="submit" class="btn btn-secondary" style="width:100%; margin-top:10px;">Send Secure Message</button>
-            </form>
+    <div class="resource-grid">
+        <div class="res-card">
+            <div style="font-size: 3rem;">📖</div>
+            <h3 style="color: #1e293b;">Free Study Notes</h3>
+            <p style="color: #64748b; font-size: 0.9rem;">Sermon summaries and educational outlines for everyone.</p>
+            <a href="https://drive.google.com/drive/folders/1KNMM3JUbuZQZ9gpyiO9Ctqb2lglFDN97" target="_blank" class="btn-main" style="background: #2563eb; color: white;">
+                Download Documents Here
+            </a>
         </div>
-    </div>
-    <section class="testimonial-section">
-    <h2 style="margin-bottom: 30px;">What People Say</h2>
-    <div class="bento-grid">
-        <div class="t-card">
-            <p>"Peter's ministry and music bring so much peace and inspiration to our congregation."</p>
-            <p><strong>- Church Member</strong></p>
-        </div>
-        <div class="t-card">
-            <p>"A dedicated educator who truly cares about the success of every student."</p>
-            <p><strong>- Fellow Teacher</strong></p>
-        </div>
-    </div>
-<section class="testimonial-section">
-    <h2 style="margin-bottom: 30px;">What People Say</h2>
-    <div class="bento-grid">
-        <div class="t-card">
-            <p>"Peter's ministry and music bring so much peace and inspiration to our congregation."</p>
-            <p><strong>- Church Member</strong></p>
-        </div>
-        <div class="t-card">
-            <p>"A dedicated educator who truly cares about the success of every student."</p>
-            <p><strong>- Fellow Teacher</strong></p>
+
+        <div class="res-card" style="border: 2px solid #2563eb;">
+            <div style="font-size: 3rem;">⭐</div>
+            <h3 style="color: #1e293b;">Premium Masterclasses</h3>
+            <p style="color: #64748b; font-size: 0.9rem;">Exclusive music arrangements and advanced leadership curricula.</p>
+            <a href="https://wa.me/254746357349?text=Hello%20Bishop%20Peter,%20I%20want%20to%20buy%20the%20Premium%20Materials" target="_blank" class="btn-main" style="background: #059669; color: white;">
+                Order via M-Pesa
+            </a>
         </div>
     </div>
 </section>
 
-<<section id="resources" style="padding: 60px 20px; background-color: #f8fafc; font-family: sans-serif;">
-    <div style="max-width: 1000px; margin: 0 auto; text-align: center;">
-        <h2 style="font-size: 2.2rem; color: #0f172a; margin-bottom: 10px;">Resource Center</h2>
-        <p style="color: #64748b; margin-bottom: 40px;">Equipping you for spiritual and educational growth.</p>
-
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
-            <div style="background: white; padding: 30px; border-radius: 20px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-                <div style="font-size: 2.5rem; margin-bottom: 15px;">📖</div>
-                <h3 style="color: #1e293b;">Free Study Materials</h3>
-                <p style="color: #64748b; font-size: 0.9rem; margin-bottom: 20px;">Download sermon notes and educational guides directly.</p>
-                <a href="https://drive.google.com/drive/folders/1KNMM3JUbuZQZ9gpyiO9Ctqb2lglFDN97" target="_blank" style="display: block; background: #2563eb; color: white; padding: 12px; border-radius: 10px; text-decoration: none; font-weight: bold;">Download Documents Here</a>
-            </div>
-
-            <div style="background: white; padding: 30px; border-radius: 20px; border: 2px solid #2563eb; box-shadow: 0 10px 15px rgba(37, 99, 235, 0.1);">
-                <div style="font-size: 2.5rem; margin-bottom: 15px;">⭐</div>
-                <h3 style="color: #1e293b;">Premium Masterclasses</h3>
-                <p style="color: #64748b; font-size: 0.9rem; margin-bottom: 20px;">Advanced curricula and exclusive music compositions.</p>
-                <a href="https://wa.me/254746357349?text=Hello%20Bishop%20Peter,%20I%20want%20to%20buy%20the%20Premium%20Materials" target="_blank" style="display: block; background: #059669; color: white; padding: 12px; border-radius: 10px; text-decoration: none; font-weight: bold;">Order via M-Pesa</a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<footer style="background: #0f172a; color: #ffffff; padding: 60px 20px; text-align: center; border-top: 4px solid #2563eb;">
-    <p style="font-style: italic; font-size: 1.1rem; color: #e2e8f0; max-width: 600px; margin: 0 auto 30px auto; line-height: 1.6;">
+<footer style="background: #0f172a; color: white; padding: 60px 20px; text-align: center;">
+    <p style="font-style: italic; color: #cbd5e1; max-width: 600px; margin: 0 auto 30px;">
         "Education is a constant, the student is the variable—together we create infinite possibilities."
     </p>
 
     <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 30px;">
-        <a href="https://www.facebook.com/profile.php?id=100069418325247" target="_blank" style="width: 50px; height: 50px; background: #1877f2; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 20px;">
-           <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="https://youtube.com/@petermutua3996" target="_blank" style="width: 50px; height: 50px; background: #ff0000; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 20px;">
-           <i class="fab fa-youtube"></i>
-        </a>
+        <a href="https://www.facebook.com/profile.php?id=100069418325247" target="_blank" style="color: white; font-size: 24px;"><i class="fab fa-facebook"></i></a>
+        <a href="https://youtube.com/@petermutua3996" target="_blank" style="color: white; font-size: 24px;"><i class="fab fa-youtube"></i></a>
     </div>
 
-    <p style="color: #cbd5e1; margin-bottom: 10px;">
-        Email: <strong style="color: #ffffff;">pm6482545@gmail.com</strong> | Location: <strong style="color: #ffffff;">Mombasa, Kenya</strong>
-    </p>
-
-    <p style="font-size: 0.8rem; color: #94a3b8; margin-top: 25px; letter-spacing: 1px;">
-        © 2026 PETER MUSAU MUTUA. ALL RIGHTS RESERVED.
-    </p>
+    <p style="font-size: 0.9rem;">Email: pm6482545@gmail.com | Mombasa, Kenya</p>
+    <p style="font-size: 0.8rem; margin-top: 20px; opacity: 0.6;">© 2026 Peter Musau Mutua. All Rights Reserved.</p>
 </footer>
 
+<button onclick="topFunction()" id="scrollTopBtn" title="Go to top">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<script>
+    let mybutton = document.getElementById("scrollTopBtn");
+
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    function topFunction() {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+</script>
 
 </body>
 </html>
