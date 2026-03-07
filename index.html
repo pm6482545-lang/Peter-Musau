@@ -4,6 +4,7 @@
     <title>Peter Musau | Portfolio</title>
 <meta name="title" content="Peter Musau | Portfolio">
 <meta name="description" content="Explore my projects and professional journey. Welcome to my personal website hosted on Netlify.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://petermusau.netlify.app/">
@@ -23,6 +24,23 @@
     <title>PETER MUSAU MUTUA | Educator • Minister • Musician</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        /* Footer Icon Animations */
+footer a {
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+footer a:hover {
+    transform: scale(1.2) translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    filter: brightness(1.2);
+}
+
+/* Ensures the icons are centered inside the circles */
+footer i {
+    display: inline-block;
+    line-height: 50px;
+}
+
         /* --- 2026 Modern Portfolio Styles --- */
 :root {
     --primary-blue: #2563eb;
@@ -365,10 +383,32 @@ function topFunction() {
 
 
     <footer>
-        <p>"Education is a constant, the student is the variable—together we create infinite possibilities."</p>
-        <p>Email: <strong>pm6482545@gmail.com</strong> | Location: <strong>Mombasa, Kenya</strong></p>
-        <p style="font-size: 0.8rem; opacity: 0.5; margin-top: 25px;">© 2026 Peter Musau Mutua. All Rights Reserved.</p>
-    </footer>
+        <footer style="background: #0f172a; color: #ffffff; padding: 60px 20px; text-align: center; border-top: 4px solid #2563eb;">
+    
+    <p style="font-style: italic; font-size: 1.1rem; color: #e2e8f0; max-width: 600px; margin: 0 auto 30px auto; line-height: 1.6;">
+        "Education is a constant, the student is the variable—together we create infinite possibilities."
+    </p>
+
+    <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 30px;">
+        <a href="https://www.facebook.com/profile.php?id=100069418325247" target="_blank" 
+           style="width: 50px; height: 50px; background: #1877f2; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 20px;">
+           <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://youtube.com/@petermutua3996" target="_blank" 
+           style="width: 50px; height: 50px; background: #ff0000; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 20px;">
+           <i class="fab fa-youtube"></i>
+        </a>
+    </div>
+
+    <p style="color: #cbd5e1; margin-bottom: 10px;">
+        Email: <strong style="color: #ffffff;">pm6482545@gmail.com</strong> | Location: <strong style="color: #ffffff;">Mombasa, Kenya</strong>
+    </p>
+
+    <p style="font-size: 0.8rem; color: #94a3b8; margin-top: 25px; letter-spacing: 1px;">
+        © 2026 PETER MUSAU MUTUA. ALL RIGHTS RESERVED.
+    </p>
+</footer>
+
 
 </body>
 </html>
