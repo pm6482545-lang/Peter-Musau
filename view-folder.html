@@ -15,55 +15,37 @@
         
         #folder-title { margin: 10px 0; font-size: 1.8rem; letter-spacing: 1.5px; font-weight: 800; text-transform: uppercase; }
 
-        /* Timer Section */
+        /* Exam Timer */
         .timer-box { background: #000; color: var(--gold); padding: 20px; border-radius: 8px; margin-bottom: 25px; text-align: center; border: 1px solid var(--gold); }
         #countdown { font-size: 1.8rem; font-weight: 800; letter-spacing: 2px; font-family: 'Courier New', monospace; }
 
-        /* Search Bar */
+        /* Search Interface */
         .search-container { margin-bottom: 25px; }
-        #search-input {
-            width: 100%; padding: 16px; border-radius: 5px;
-            border: 1px solid #ccc; font-size: 1rem; box-sizing: border-box; outline: none;
-        }
+        #search-input { width: 100%; padding: 16px; border-radius: 5px; border: 1px solid #ccc; font-size: 1rem; box-sizing: border-box; outline: none; }
 
-        /* Premium Lock Section */
-        #premium-lock {
-            display: none; background: white; padding: 40px 25px;
-            border-radius: 8px; text-align: center; border-top: 5px solid var(--gold);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-        
-        /* Pricing Table */
+        /* Premium Section */
+        #premium-lock { display: none; background: white; padding: 40px 25px; border-radius: 8px; text-align: center; border-top: 5px solid var(--gold); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
         .price-table { width: 100%; margin: 20px 0; border-collapse: collapse; text-align: left; }
         .price-table th { background: #fdfaf0; padding: 12px; border-bottom: 2px solid var(--gold); }
         .price-table td { padding: 12px; border-bottom: 1px solid #eee; }
         .price-tag { font-weight: bold; color: var(--secondary); }
 
-        /* The Professional Button */
-        .pro-btn {
-            background: var(--primary); color: var(--gold); text-decoration: none;
-            padding: 20px; border-radius: 5px; font-weight: 800; font-size: 0.95rem;
-            display: block; border: 2px solid var(--gold); text-transform: uppercase;
-            transition: 0.4s; letter-spacing: 1px; line-height: 1.4; margin: 20px 0;
-        }
+        /* Action Buttons */
+        .pro-btn { background: var(--primary); color: var(--gold); text-decoration: none; padding: 20px; border-radius: 5px; font-weight: 800; font-size: 0.95rem; display: block; border: 2px solid var(--gold); text-transform: uppercase; transition: 0.4s; letter-spacing: 1px; line-height: 1.4; margin: 20px 0; }
         .pro-btn:hover { background: var(--gold); color: white; }
 
-        /* Reviews */
+        /* Testimonials */
         .reviews-title { margin-top: 40px; font-size: 1.1rem; font-weight: bold; text-align: left; text-transform: uppercase; border-bottom: 1px solid #ddd; padding-bottom: 5px; }
         .review-card { background: #f9f9f9; padding: 15px; border-radius: 8px; margin-top: 15px; border-left: 4px solid var(--gold); font-style: italic; text-align: left; }
         .student-name { display: block; margin-top: 8px; font-weight: bold; font-style: normal; color: var(--gold); }
 
-        /* Contact Form inside Resources */
+        /* Subscription Form */
         .contact-mini { background: var(--primary); color: white; padding: 25px; border-radius: 8px; margin-top: 30px; text-align: left; }
-        .contact-mini input, .contact-mini select { width: 100%; padding: 10px; margin: 10px 0; border-radius: 4px; border: none; }
+        .contact-mini input, .contact-mini select { width: 100%; padding: 10px; margin: 10px 0; border-radius: 4px; border: none; box-sizing: border-box; }
         
-        /* File List */
+        /* File Management */
         .file-list { display: grid; gap: 15px; }
-        .file-card {
-            background: white; padding: 20px; border-radius: 5px;
-            display: flex; justify-content: space-between; align-items: center;
-            border-left: 5px solid var(--secondary); box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
+        .file-card { background: white; padding: 20px; border-radius: 5px; display: flex; justify-content: space-between; align-items: center; border-left: 5px solid var(--secondary); box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
         .subject-icon { font-size: 1.6rem; margin-right: 20px; }
         .file-name { font-weight: 700; color: #2c3e50; flex: 1; }
         .download-btn { background: var(--secondary); color: white; text-decoration: none; padding: 10px 20px; border-radius: 4px; font-weight: bold; }
@@ -107,13 +89,14 @@
 
         <a id="buy-btn" href="#" class="pro-btn">PROFESSIONAL DOCUMENTS, PREDICTIONS PAPERS AND TERMLY EXAMS</a>
 
-        <div class="reviews-title">Recent Success Stories</div>
-        <div class="review-card">"The 2025 Science predictions were spot on. I got an A-!" <span class="student-name">— Form 4 Candidate</span></div>
-        <div class="review-card">"High-quality termly exams. Perfect for Mombasa teachers." <span class="student-name">— Private Tutor</span></div>
+        <div class="reviews-title">Success Stories</div>
+        <div class="review-card">"The Science predictions were excellent. High marks achieved!" <span class="student-name">— Grade 9 Student</span></div>
 
         <div class="contact-mini">
             <h3 style="color: var(--gold); margin-top: 0;">Get Free Study Tips</h3>
             <form action="https://formspree.io/f/xgonokva" method="POST">
+                <input type="hidden" name="_next" value="https://pm6482545-lang.github.io/Peter-Musau/thanks.html">
+                
                 <input type="text" name="name" placeholder="Your Full Name" required>
                 <input type="text" name="contact" placeholder="WhatsApp Number" required>
                 <select name="grade">
@@ -127,10 +110,10 @@
 
     <div id="main-content">
         <div class="search-container">
-            <input type="text" id="search-input" placeholder="Search archives by subject or term..." onkeyup="filterFiles()">
+            <input type="text" id="search-input" placeholder="Search by subject (e.g. Math, Chemistry)..." onkeyup="filterFiles()">
         </div>
         <div id="file-container" class="file-list">
-            <div class="loading">Connecting to academic archives...</div>
+            <div class="loading">Establishing secure connection...</div>
         </div>
     </div>
 </div>
@@ -144,7 +127,6 @@
     const repo = "Peter-Musau";
     const myPhone = "254746357349";
 
-    // TIMER LOGIC
     function startTimer() {
         const examDate = new Date("October 19, 2026 08:00:00").getTime();
         setInterval(() => {
@@ -160,8 +142,8 @@
 
     if (folderName) {
         document.getElementById('folder-title').innerText = folderName.toUpperCase() + " ARCHIVES";
-        document.getElementById('buy-btn').href = `https://wa.me/${myPhone}?text=Hi Mr. Peter, I have paid for the Professional Documents/Predictions. Reference: `;
-        document.getElementById('request-wa').href = `https://wa.me/${myPhone}?text=Inquiry about ${folderName} resources.`;
+        document.getElementById('buy-btn').href = `https://wa.me/${myPhone}?text=Hello Mr. Peter, I have paid for the Professional Documents. Reference: `;
+        document.getElementById('request-wa').href = `https://wa.me/${myPhone}?text=Inquiry regarding ${folderName} materials.`;
 
         if (folderName === "PRO") {
             document.getElementById('main-content').style.display = 'none';
@@ -187,7 +169,7 @@
             container.innerHTML = ''; 
             const pdfFiles = files.filter(f => f.type === "file");
             if (pdfFiles.length === 0) {
-                container.innerHTML = '<div class="loading">No archives found in this section.</div>';
+                container.innerHTML = '<div class="loading">No files found here yet.</div>';
                 return;
             }
             pdfFiles.forEach(file => {
@@ -197,7 +179,7 @@
                 container.appendChild(card);
             });
         } catch (e) {
-            container.innerHTML = '<div class="loading">Error loading archives. Please refresh.</div>';
+            container.innerHTML = '<div class="loading">Connection error. Please refresh.</div>';
         }
     }
 
