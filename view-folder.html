@@ -3,119 +3,214 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resources | Peter Musau</title>
+    <title>Academic Archives | Peter Musau</title>
     <style>
-        :root { --primary: #2c3e50; --secondary: #27ae60; --light: #f4f7f6; }
-        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: var(--light); color: var(--primary); }
-        header { background: var(--primary); color: white; padding: 30px 20px; text-align: center; }
+        :root { --primary: #1a252f; --gold: #d4af37; --secondary: #27ae60; --light: #f8f9fa; }
+        body { font-family: 'Segoe UI', Roboto, sans-serif; margin: 0; background: var(--light); color: var(--primary); padding-bottom: 100px; }
+        header { background: var(--primary); color: white; padding: 40px 20px; text-align: center; border-bottom: 4px solid var(--gold); }
         
-        .container { max-width: 800px; margin: 20px auto; padding: 0 15px; }
-        .back-link { color: white; text-decoration: none; font-size: 0.85rem; border: 1px solid white; padding: 6px 15px; border-radius: 20px; display: inline-block; margin-bottom: 15px; }
+        .container { max-width: 850px; margin: 25px auto; padding: 0 15px; }
+        .back-link { color: var(--gold); text-decoration: none; font-weight: bold; border: 1.5px solid var(--gold); padding: 8px 18px; border-radius: 5px; display: inline-block; margin-bottom: 20px; transition: 0.3s; }
+        .back-link:hover { background: var(--gold); color: white; }
         
-        #folder-title { margin: 10px 0; font-size: 1.5rem; text-transform: uppercase; letter-spacing: 1px; }
+        #folder-title { margin: 10px 0; font-size: 1.8rem; letter-spacing: 1.5px; font-weight: 800; text-transform: uppercase; }
 
-        .search-container { margin: 20px 0; }
+        /* Timer Section */
+        .timer-box { background: #000; color: var(--gold); padding: 20px; border-radius: 8px; margin-bottom: 25px; text-align: center; border: 1px solid var(--gold); }
+        #countdown { font-size: 1.8rem; font-weight: 800; letter-spacing: 2px; font-family: 'Courier New', monospace; }
+
+        /* Search Bar */
+        .search-container { margin-bottom: 25px; }
         #search-input {
-            width: 100%; padding: 12px 15px; border-radius: 8px;
-            border: 2px solid #ddd; font-size: 1rem; box-sizing: border-box;
-            outline: none;
-        }
-        #search-input:focus { border-color: var(--secondary); }
-        
-        .file-list { display: grid; gap: 12px; margin-top: 20px; }
-        
-        .file-card {
-            background: white; padding: 15px 20px; border-radius: 10px;
-            display: flex; justify-content: space-between; align-items: center;
-            border: 1px solid #ddd; box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-        .file-name { font-weight: 600; color: var(--primary); font-size: 0.95rem; flex: 1; margin-right: 10px; }
-        
-        .download-btn {
-            background: var(--secondary); color: white; text-decoration: none;
-            padding: 8px 18px; border-radius: 6px; font-weight: bold;
-            font-size: 0.85rem;
+            width: 100%; padding: 16px; border-radius: 5px;
+            border: 1px solid #ccc; font-size: 1rem; box-sizing: border-box; outline: none;
         }
 
-        .loading, .error-msg { text-align: center; padding: 40px; color: #777; font-style: italic; }
+        /* Premium Lock Section */
+        #premium-lock {
+            display: none; background: white; padding: 40px 25px;
+            border-radius: 8px; text-align: center; border-top: 5px solid var(--gold);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        /* Pricing Table */
+        .price-table { width: 100%; margin: 20px 0; border-collapse: collapse; text-align: left; }
+        .price-table th { background: #fdfaf0; padding: 12px; border-bottom: 2px solid var(--gold); }
+        .price-table td { padding: 12px; border-bottom: 1px solid #eee; }
+        .price-tag { font-weight: bold; color: var(--secondary); }
+
+        /* The Professional Button */
+        .pro-btn {
+            background: var(--primary); color: var(--gold); text-decoration: none;
+            padding: 20px; border-radius: 5px; font-weight: 800; font-size: 0.95rem;
+            display: block; border: 2px solid var(--gold); text-transform: uppercase;
+            transition: 0.4s; letter-spacing: 1px; line-height: 1.4; margin: 20px 0;
+        }
+        .pro-btn:hover { background: var(--gold); color: white; }
+
+        /* Reviews */
+        .reviews-title { margin-top: 40px; font-size: 1.1rem; font-weight: bold; text-align: left; text-transform: uppercase; border-bottom: 1px solid #ddd; padding-bottom: 5px; }
+        .review-card { background: #f9f9f9; padding: 15px; border-radius: 8px; margin-top: 15px; border-left: 4px solid var(--gold); font-style: italic; text-align: left; }
+        .student-name { display: block; margin-top: 8px; font-weight: bold; font-style: normal; color: var(--gold); }
+
+        /* Contact Form inside Resources */
+        .contact-mini { background: var(--primary); color: white; padding: 25px; border-radius: 8px; margin-top: 30px; text-align: left; }
+        .contact-mini input, .contact-mini select { width: 100%; padding: 10px; margin: 10px 0; border-radius: 4px; border: none; }
+        
+        /* File List */
+        .file-list { display: grid; gap: 15px; }
+        .file-card {
+            background: white; padding: 20px; border-radius: 5px;
+            display: flex; justify-content: space-between; align-items: center;
+            border-left: 5px solid var(--secondary); box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .subject-icon { font-size: 1.6rem; margin-right: 20px; }
+        .file-name { font-weight: 700; color: #2c3e50; flex: 1; }
+        .download-btn { background: var(--secondary); color: white; text-decoration: none; padding: 10px 20px; border-radius: 4px; font-weight: bold; }
+
+        .whatsapp-float { position: fixed; bottom: 25px; right: 25px; background: #25d366; color: white; padding: 15px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; z-index: 1000; box-shadow: 0 5px 20px rgba(0,0,0,0.3); }
+        .loading { text-align: center; padding: 50px; color: #95a5a6; font-style: italic; }
     </style>
 </head>
 <body>
 
 <header>
-    <a href="library.html" class="back-link">← Back to Library</a>
-    <h1 id="folder-title">Accessing Resources...</h1>
+    <a href="library.html" class="back-link">RETURN TO LIBRARY</a>
+    <h1 id="folder-title">LOADING ARCHIVES...</h1>
 </header>
 
 <div class="container">
-    <div class="search-container">
-        <input type="text" id="search-input" placeholder="Search for a paper (e.g. Math, Term 2)..." onkeyup="filterFiles()">
+    <div class="timer-box">
+        <div style="font-size: 0.7rem; text-transform: uppercase; margin-bottom: 5px;">Countdown to KCSE 2026</div>
+        <div id="countdown">00d : 00h : 00m : 00s</div>
     </div>
 
-    <div id="file-container" class="file-list">
-        <div class="loading">Scanning the library for files...</div>
+    <div id="premium-lock">
+        <div style="background: var(--gold); color: white; padding: 5px 15px; display: inline-block; border-radius: 3px; font-weight: bold; font-size: 0.8rem; margin-bottom: 15px;">OFFICIAL PREMIUM PORTAL</div>
+        <h2 style="margin: 0;">Secure Professional Resources</h2>
+        
+        <table class="price-table">
+            <thead>
+                <tr><th>Resource Type</th><th>Price (KES)</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Prediction Papers</td><td class="price-tag">Ksh 100</td></tr>
+                <tr><td>Termly Evaluation Exams</td><td class="price-tag">Ksh 50</td></tr>
+                <tr><td>Professional Teacher Documents</td><td class="price-tag">Ksh 100</td></tr>
+            </tbody>
+        </table>
+
+        <div style="background: #fdfaf0; padding: 15px; border: 1px solid #eee; margin: 20px 0;">
+            <p style="margin: 0; font-weight: bold;">M-PESA: 0746 357 349</p>
+            <p style="margin: 5px 0 0; font-size: 0.85rem;">(Account: Peter Musau Mutua)</p>
+        </div>
+
+        <a id="buy-btn" href="#" class="pro-btn">PROFESSIONAL DOCUMENTS, PREDICTIONS PAPERS AND TERMLY EXAMS</a>
+
+        <div class="reviews-title">Recent Success Stories</div>
+        <div class="review-card">"The 2025 Science predictions were spot on. I got an A-!" <span class="student-name">— Form 4 Candidate</span></div>
+        <div class="review-card">"High-quality termly exams. Perfect for Mombasa teachers." <span class="student-name">— Private Tutor</span></div>
+
+        <div class="contact-mini">
+            <h3 style="color: var(--gold); margin-top: 0;">Get Free Study Tips</h3>
+            <form action="https://formspree.io/f/xgonokva" method="POST">
+                <input type="text" name="name" placeholder="Your Full Name" required>
+                <input type="text" name="contact" placeholder="WhatsApp Number" required>
+                <select name="grade">
+                    <option value="KCSE">KCSE Candidate</option>
+                    <option value="KPSEA">KPSEA Candidate</option>
+                </select>
+                <button type="submit" style="background: var(--gold); color: var(--primary); width: 100%; padding: 12px; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">SUBSCRIBE</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search archives by subject or term..." onkeyup="filterFiles()">
+        </div>
+        <div id="file-container" class="file-list">
+            <div class="loading">Connecting to academic archives...</div>
+        </div>
     </div>
 </div>
+
+<a id="request-wa" href="#" class="whatsapp-float">HELP ON WHATSAPP</a>
 
 <script>
     const urlParams = new URLSearchParams(window.location.search);
     const folderName = urlParams.get('folder'); 
-    
-    if (folderName) {
-        document.getElementById('folder-title').innerText = folderName + " MATERIALS";
-    }
-
-    // UPDATED GITHUB DETAILS
     const username = "pm6482545-lang";
     const repo = "Peter-Musau";
+    const myPhone = "254746357349";
+
+    // TIMER LOGIC
+    function startTimer() {
+        const examDate = new Date("October 19, 2026 08:00:00").getTime();
+        setInterval(() => {
+            const now = new Date().getTime();
+            const diff = examDate - now;
+            const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const s = Math.floor((diff % (1000 * 60)) / 1000);
+            document.getElementById("countdown").innerHTML = `${d}d : ${h}h : ${m}m : ${s}s`;
+        }, 1000);
+    }
+
+    if (folderName) {
+        document.getElementById('folder-title').innerText = folderName.toUpperCase() + " ARCHIVES";
+        document.getElementById('buy-btn').href = `https://wa.me/${myPhone}?text=Hi Mr. Peter, I have paid for the Professional Documents/Predictions. Reference: `;
+        document.getElementById('request-wa').href = `https://wa.me/${myPhone}?text=Inquiry about ${folderName} resources.`;
+
+        if (folderName === "PRO") {
+            document.getElementById('main-content').style.display = 'none';
+            document.getElementById('premium-lock').style.display = 'block';
+        } else {
+            loadFiles();
+        }
+    }
+
+    function getIcon(name) {
+        const n = name.toLowerCase();
+        if (n.includes("math")) return "📐";
+        if (n.includes("scie") || n.includes("chem") || n.includes("phy")) return "🧪";
+        if (n.includes("kisw") || n.includes("engl")) return "📖";
+        return "📄";
+    }
 
     async function loadFiles() {
         const container = document.getElementById('file-container');
         try {
-            // FIXED: Using backticks and lowercase 'documents' path
             const response = await fetch(`https://api.github.com/repos/${username}/${repo}/contents/documents/${folderName}`);
-            
-            if (!response.ok) {
-                console.error("GitHub Error:", response.status);
-                throw new Error('Folder not found');
-            }
-
             const files = await response.json();
             container.innerHTML = ''; 
-
-            const pdfFiles = files.filter(file => file.type === "file");
-            
+            const pdfFiles = files.filter(f => f.type === "file");
             if (pdfFiles.length === 0) {
-                container.innerHTML = '<div class="error-msg">No documents found in this folder.</div>';
+                container.innerHTML = '<div class="loading">No archives found in this section.</div>';
                 return;
             }
-
             pdfFiles.forEach(file => {
                 const card = document.createElement('div');
                 card.className = 'file-card';
-                card.innerHTML = `
-                    <span class="file-name">${file.name}</span>
-                    <a href="${file.download_url}" class="download-btn" target="_blank">DOWNLOAD PDF</a>
-                `;
+                card.innerHTML = `<div class="file-info"><span class="subject-icon">${getIcon(file.name)}</span><span class="file-name">${file.name.replace('.pdf', '')}</span></div><a href="${file.download_url}" class="download-btn" target="_blank">VIEW</a>`;
                 container.appendChild(card);
             });
-
-        } catch (error) {
-            container.innerHTML = '<div class="error-msg">Unable to load materials. Make sure the folder exists on GitHub.</div>';
+        } catch (e) {
+            container.innerHTML = '<div class="loading">Error loading archives. Please refresh.</div>';
         }
     }
 
     function filterFiles() {
-        const input = document.getElementById('search-input').value.toLowerCase();
+        const val = document.getElementById('search-input').value.toLowerCase();
         const cards = document.getElementsByClassName('file-card');
-        for (let card of cards) {
-            const name = card.querySelector('.file-name').innerText.toLowerCase();
-            card.style.display = name.includes(input) ? "flex" : "none";
+        for (let c of cards) {
+            const txt = c.querySelector('.file-name').innerText.toLowerCase();
+            c.style.display = txt.includes(val) ? "flex" : "none";
         }
     }
 
-    if (folderName) { loadFiles(); }
+    startTimer();
 </script>
-
 </body>
 </html>
