@@ -146,12 +146,16 @@
         document.getElementById('buy-btn').href = `https://wa.me/${myPhone}?text=Hello Mr. Peter, I have paid for the Professional Documents. Reference: `;
         document.getElementById('request-wa').href = `https://wa.me/${myPhone}?text=Inquiry regarding ${folderName} materials.`;
 
+        // MODIFIED: Ensure main-content stays visible so PRO files appear below payment info
+        document.getElementById('main-content').style.display = 'block';
+
         if (folderName === "PRO") {
-            document.getElementById('main-content').style.display = 'none';
             document.getElementById('premium-lock').style.display = 'block';
         } else {
-            loadFiles();
+            document.getElementById('premium-lock').style.display = 'none';
         }
+
+        loadFiles();
     }
 
     function getIcon(name) {
@@ -176,7 +180,19 @@
             pdfFiles.forEach(file => {
                 const card = document.createElement('div');
                 card.className = 'file-card';
-                card.innerHTML = `<div class="file-info"><span class="subject-icon">${getIcon(file.name)}</span><span class="file-name">${file.name.replace('.pdf', '')}</span></div><a href="${file.download_url}" class="download-btn" target="_blank">VIEW</a>`;
+                const fileNameClean = file.name.replace('.pdf', '');
+
+                let actionButton;
+                // MODIFIED: Only PRO folder files get the WhatsApp redirect
+                if (folderName === "PRO") {
+                    const waMsg = encodeURIComponent(`Hello Mr. Peter, I want to purchase the PRO document: ${fileNameClean}`);
+                    const waLink = `https://wa.me/${myPhone}?text=${waMsg}`;
+                    actionButton = `<a href="${waLink}" class="download-btn" style="background: var(--gold);">GET ACCESS</a>`;
+                } else {
+                    actionButton = `<a href="${file.download_url}" class="download-btn" target="_blank">VIEW</a>`;
+                }
+
+                card.innerHTML = `<div class="file-info"><span class="subject-icon">${getIcon(file.name)}</span><span class="file-name">${fileNameClean}</span></div>${actionButton}`;
                 container.appendChild(card);
             });
         } catch (e) {
