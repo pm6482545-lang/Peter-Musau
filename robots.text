@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# This points Google to your specific sitemap
+Sitemap: https://petermusau.co.ke/sitemap.xml
