@@ -1,0 +1,32 @@
+name: Generate sitemap
+on:
+  push:
+    branches: [ main ]  # This runs every time you upload/push code
+  workflow_dispatch:      # This allows you to run it manually if needed
+
+jobs:
+  sitemap:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Generate the sitemap
+        id: sitemap
+        uses: cicirello/generate-sitemap@v1
+        with:
+          base-url-path: https://bethaniaacademy.com/
+          include-pdf: true  # This ensures your library papers are found
+          include-html: true
+
+      - name: Commit and push
+        run: |
+          if [[ `git status --porcelain sitemap.xml` ]]; then
+            git config --global user.name 'Sitemap Bot'
+            git config --global user.email 'actions@github.com'
+            git add sitemap.xml
+            git commit -m "Automated sitemap update"
+            git push
+          fi
